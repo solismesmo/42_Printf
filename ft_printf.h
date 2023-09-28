@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_teste.c                                       :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: livieira <livieira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/01 06:19:16 by livieira          #+#    #+#             */
-/*   Updated: 2023/09/28 01:02:07 by livieira         ###   ########.fr       */
+/*   Created: 2023/09/27 23:34:45 by livieira          #+#    #+#             */
+/*   Updated: 2023/09/28 01:01:15 by livieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "ft_printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
+# include <stdarg.h>
+# include <unistd.h>
 
-int	main(void)
-{
-	ft_printf("%cHello World\n", 'h');
-	return (0);
-}
+int	ft_printf(const char *string, ...);
+
+
+#endif

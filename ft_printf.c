@@ -1,20 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_teste.c                                       :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: livieira <livieira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/01 06:19:16 by livieira          #+#    #+#             */
-/*   Updated: 2023/09/28 01:02:07 by livieira         ###   ########.fr       */
+/*   Created: 2023/09/27 23:33:31 by livieira          #+#    #+#             */
+/*   Updated: 2023/09/28 01:13:18 by livieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "ft_printf.h"
+#include <stdio.h>
 
-int	main(void)
+int	ft_printf(const char *string, ...)
 {
-	ft_printf("%cHello World\n", 'h');
-	return (0);
+	int		i;
+	va_list	pointer_arg;
+
+	va_start(pointer_arg, string);
+	
+
+	i = 0;
+	while (string[i++])
+	{
+		if (string[i] == '%')
+		{
+			printf("%d", i);
+			if (string[i+1] == 'c')
+				printf("qq coisa%c%d",va_arg(pointer_arg, const char *), i);
+		}
+		else
+		{
+			printf("%c", string[i]);
+		}
+	}
+
+	//printf(va_arg(pointer_arg, const char *));
+
+	va_end(pointer_arg);
+
 }
