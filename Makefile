@@ -1,12 +1,9 @@
 NAME 		:= libftprintf.a
-SOURCES 	:= ft_printf.c
+SOURCES 	:=	ft_printf.c \
+				ft_printf_utils.c \
+				ft_printf_parse.c \
 			
-
-SOURCES_BONUS := ft_printf_bonus.c
-
-
 OBJECTS 		:= ${SOURCES:.c=.o}
-OBJECTS_BONUS	:= ${SOURCES_BONUS:.c=.o}
 CC 				:= cc
 RM				:= rm -f
 CFLAGS			:= -Wall -Wextra -Werror
@@ -16,15 +13,13 @@ all: ${NAME}
 
 $(NAME): 	${OBJECTS}
 
-bonus: 		${OBJECTS_BONUS}
-
 %.o:%.c
 			${CC} ${CFLAGS} -c $< -o $@
 			${AR} ${NAME} $@
 
 clean: 
-			${RM} ${OBJECTS} ${OBJECTS_BONUS}
-
+			${RM} ${OBJECTS} 
+			
 fclean: clean 
 			${RM} ${NAME}
 
