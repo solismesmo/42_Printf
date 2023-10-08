@@ -6,7 +6,7 @@
 /*   By: livieira <livieira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 23:33:31 by livieira          #+#    #+#             */
-/*   Updated: 2023/09/28 17:01:07 by livieira         ###   ########.fr       */
+/*   Updated: 2023/09/28 17:06:54 by livieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int	ft_printf(const char *string, ...)
 	if (!string)
 		return (-1);
 	va_start(pointer_arg, string);
-
 	i = 0;
 	bytes = 0;
 	while (string[i])

@@ -6,7 +6,7 @@
 /*   By: livieira <livieira@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 16:51:10 by livieira          #+#    #+#             */
-/*   Updated: 2023/09/28 16:56:47 by livieira         ###   ########.fr       */
+/*   Updated: 2023/09/28 17:10:01 by livieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_strlen(const char *s)
 	int	count;
 
 	count = 0;
-	while (s++)
+	while (s[count])
 		count++;
 	return (count);
 }
