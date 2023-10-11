@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_teste.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: livieira <livieira@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: livieira <livieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 06:19:16 by livieira          #+#    #+#             */
-/*   Updated: 2023/09/28 17:26:30 by livieira         ###   ########.fr       */
+/*   Updated: 2023/10/11 17:02:53 by livieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 
 int	main(void)
 {
-	ft_printf("Minha\n%s\n",  1);
+	ft_printf("Minha\n%c\n",  "nossa");
 	return (0);
 }
