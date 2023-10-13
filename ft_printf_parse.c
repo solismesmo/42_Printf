@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_parse.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: livieira <livieira@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: livieira <livieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 16:59:26 by livieira          #+#    #+#             */
-/*   Updated: 2023/10/13 01:24:08 by livieira         ###   ########.fr       */
+/*   Updated: 2023/10/13 16:29:30 by livieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int	ft_parse(char flag, va_list ptr_arg)
 	else if (flag == 's')
 		bytes += ft_putstr(va_arg(ptr_arg, char *));
 	else if (flag == 'x')
-		bytes += ft_putnbase(va_arg(ptr_arg, int), HEXA_LOWER_BASE);
+		bytes += ft_putnbase(va_arg(ptr_arg, unsigned int), HEXA_LOWER_BASE);
 	else if (flag == 'X')
-		bytes += ft_putnbase(va_arg(ptr_arg, int), HEXA_UPPER_BASE);
+		bytes += ft_putnbase(va_arg(ptr_arg, unsigned int), HEXA_UPPER_BASE);
 	else if (flag == 'u')
 		bytes += ft_putnbase(va_arg(ptr_arg, unsigned int), DECIMAL_BASE);
 	else if (flag == 'i' || flag == 'd')
