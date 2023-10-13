@@ -6,7 +6,7 @@
 /*   By: livieira <livieira@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 06:19:16 by livieira          #+#    #+#             */
-/*   Updated: 2023/10/13 16:30:01 by livieira         ###   ########.fr       */
+/*   Updated: 2023/10/13 18:46:39 by livieira         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 int main()
 {
 	void *pointer = NULL;
+	char *string = NULL;
 
 	ft_printf("Minha função:\n");
 	ft_printf("%c\n", 'a');
@@ -27,6 +28,11 @@ int main()
 	ft_printf("%s\n", "Hello World");
 	printf("Função original:\n");
 	printf("%s\n", "Hello World");
+
+	ft_printf("Minha stringggg função:\n");
+	ft_printf("%s\n", string);
+	printf("Função original:\n");
+	printf("%s\n", string);
 
 	ft_printf("Minha função:\n");
 	ft_printf("%p\n", pointer);
@@ -92,4 +98,9 @@ int main()
 	ft_printf("%c %c %c %c\n", 'a', 'b', 'c', 'd');
 	printf("Função original:\n");
 	printf("%c %c %c %c\n", 'a', 'b', 'c', 'd');
+
+	ft_printf("Minha MIX função:\n");
+	ft_printf("%c %s %c %i\n", 'a', "string", 'c', 'd');
+	printf("Função original:\n");
+	printf("%c %s %c %i\n", 'a', "string", 'c', 'd');
 }
