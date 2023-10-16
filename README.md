@@ -1,38 +1,27 @@
-# ft_printf
+# Printf
 
-O objetivo deste projeto é implementar a mesma função. Você aprenderá principalmente como usar Variadic Functions.
+The goal of this project is to implement the same function. You will primarily learn how to use Variadic Functions.
 
-1. Intro
-Os projetos devem ser escritos de acordo com as regras da Norma. Se houver arquivos/funções bônus, esses arquivos/funções serão incluídos na verificação de norma e receberão pontuação 0 se houver um erro de norma.
-As funções não devem ser interrompidas inesperadamente devido a um comportamento indefinido.
-Qualquer espaço de memória alocado no heap deve ser liberado adequadamente quando necessário. Vazamentos de memória não serão tolerados.
-Se essa tarefa for necessária, um Makefile deverá ser enviado. Ele -Wall -Wextra -Werrorserá compilado especificando os sinalizadores. E o Makefile não deve dar re-link.
-Makefiles devem conter pelo menos $(NAME), all, clean, fclean, .re
-Se o seu projeto permitir libft, você deve copiar os fontes e seus Makefiles associados junto com seus Makefiles associados para a pasta libft. O Makefile do seu projeto deve usar o Makefile para compilar a biblioteca e depois compilar o seu projeto.
+# I - Project Introduction
+Projects should be written following the Norm's rules. If there are bonus files/functions, these files/functions will be included in the norm check and will receive a score of 0 if there is a norm error. Functions should not crash unexpectedly due to undefined behavior. Any memory allocated on the heap must be properly freed when necessary. Memory leaks will not be tolerated. If this task is required, a Makefile should be submitted. It will be compiled with the -Wall -Wextra -Werror flags specified. The Makefile should not give any re-link errors.
 
-2. Parte obrigatória
-nome do programa: libftprintf.a
+Makefiles should contain at least $(NAME), all, clean, fclean, and .re. If your project allows libft, you should copy the sources and their associated Makefiles along with their associated Makefiles to the libft folder. Your project's Makefile should use the Makefile to compile the library and then compile your project.
 
-Entregar arquivos: .c, / .c, *.h, / .h, Makefile
-Makefile
+# II -  Mandatory
 
-all, clean, fclean, re, bônus
+Program name: libftprintf.a.
+Files: .c, .h, Makefile.
+Makefile: all, clean, fclean, re, bonus.
+Allowed external functions: malloc, free, write, va_start, va_arg, va_copy, va_end.
+Allowed Libft: Yes
+Description: Write a library that contains ft_printf, a function that will mimic the real printf.
 
-Funções externas permitidas: malloc, free, write, va_start, va_arg, va_copy, va_end
+| Prototype |
+|-----------|
+| int ft_printf(const char *, …) |
 
-Libft autorizado: sim
-
-Descrição
-Escreva uma biblioteca que contenha ft_printf, uma função que irá imitar o printf real
-
-Protótipo de ft_printf: int ft_printf(const char *, …).
-Você precisa recodificar a função printf da libc.
-Ele não deveria fazer nenhum gerenciamento de buffer como a função printf original fez.
-Gerenciaremos as seguintes conversões:cspdiuxX%
-Todas as conversões -0.*gerenciarão a combinação do sinalizador '' e a largura mínima do campo.
-Ela será comparada com a função printf original.
-
-3. Conhecimento prévio
-fator variável
-Tags de formato e especificadores de formato
-Compilar biblioteca externa
+You are required to recode the printf function from the libc. 
+It should not perform any buffer management as the original printf function did. 
+We will handle the following conversions: c, s, p, d, i, u, x, X, and %. 
+All conversions with -0.* should handle the combination of the '' flag and the minimum field width. 
+It will be compared to the original printf function.
